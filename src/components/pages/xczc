@@ -1,0 +1,5 @@
+<img className="image" src={image}/>
+
+            <div className="card-movies">
+                <p>Batman</p>
+            </div>

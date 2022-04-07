@@ -17,7 +17,7 @@ function ShowMovies() {
     async function getMovies() {
 
         try {
-            const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}movies`, { method: 'GET' })
+            const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/movies`, { method: 'GET' })
 
             const data = await response.json()
 
@@ -32,7 +32,7 @@ function ShowMovies() {
 
         try {
 
-            await fetch(`${process.env.REACT_APP_BACKEND_URL}movies/${id}`, {
+            await fetch(`${process.env.REACT_APP_BACKEND_URL}/movies/${id}`, {
                 method: 'DELETE',
                 headers: { 'Content-Type': 'application/json' }
             })

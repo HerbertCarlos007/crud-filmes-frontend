@@ -23,7 +23,7 @@ function ShowEachMovie() {
 
         try {
 
-            const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}movies/${id}`)
+            const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/movies/${id}`)
 
            const data = await response.json()
             setName(data.name)

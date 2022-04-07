@@ -13,6 +13,7 @@ function CreateMovie() {
     const [duration, setDuration] = useState('')
     const [url, setUrl] = useState('')
     const [genre, setGenre] = useState('')
+    const [releaseYear, setReleaseYear] = useState('')
 
     function handleChangeName(e) {
 
@@ -48,6 +49,13 @@ function CreateMovie() {
         const optionGenre = e.target.value
         setGenre(optionGenre)
         
+    }
+
+    function handleChangeReleaseYear(e) {
+        
+        const optionReleaseYear = e.target.value
+        setReleaseYear(optionReleaseYear)
+        console.log(optionReleaseYear)
     }
 
     async function createMovie(e){
@@ -88,6 +96,7 @@ function CreateMovie() {
                             <input placeholder="Sinopse" onChange={handleChangeSynopsi} />
                             <input placeholder="Duração" onChange={handleChangeDuration} />
                             <input placeholder="URL" onChange={handleChangeUrl} />
+                            
                             <select name="Genero" onChange={handleChangeGenre}>
                                 <option>Ação</option>
                                 <option>Comédia</option>

@@ -3,7 +3,8 @@ import React from 'react-router-dom';
 import image from './assets/imagem.jpg'
 import CreateMovie from './components/pages/CreateMovie'
 import ShowMovies from './components/pages/ShowMovies';
-import { BrowserRouter as Router, Link, Routes, Route } from "react-router-dom";
+import ShowEachMovie from './components/pages/ShowEachMovie'
+import { BrowserRouter as Router, Link, Routes, Route, Switch } from "react-router-dom";
 
 
 function App() {
@@ -11,7 +12,6 @@ function App() {
     <div className='container'>
     
     <Router>
-      
       <ul>
         <li>
           <Link className='list' to='/movies'>Movies</Link>
@@ -21,10 +21,11 @@ function App() {
         <Link   className=' list2' to='/'>Home</Link>
         </li>
       </ul>
-
+      
       <Routes>
         <Route path='/' element={<CreateMovie/>}></Route>
         <Route path='/movies' element={<ShowMovies/>}></Route>
+        <Route path='/movies/:id' element={<ShowEachMovie/>}></Route>
       </Routes>
 
     </Router>

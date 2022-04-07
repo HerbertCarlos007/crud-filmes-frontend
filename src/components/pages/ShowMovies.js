@@ -2,6 +2,9 @@ import React from "react";
 import { useEffect, useState } from 'react'
 import '../styles/ShowMovies.css'
 import image from '../../assets/imagem.jpg'
+import { Link, useParams } from "react-router-dom";
+
+
 
 function ShowMovies() {
 
@@ -41,27 +44,26 @@ function ShowMovies() {
         await getMovies()
     }
 
-
     return (
-        <div className="container">
-
+        <div className="movies-container">
 
             {movies.map((movie) =>
-                <div className="card-movies">
 
-                    <div className="info">
-                        <p>{movie.name}</p>
+                <Link to={`/movies/${movie._id}`} state={{ id: movie._id }}>
+                    <div className="card-movies" >
+
+                        <div className="info">
+                            <p>{movie.name}</p>
+                        </div>
+
+                        <img src={movie.url}></img>
+
 
                     </div>
-
                     <div>
-                       
-                    </div>
-                    <img src={movie.url}></img>
-
                         <button className="button" onClick={() => deleteMovies(movie._id)}>Deletar Filme</button>
-                    
-                </div>
+                    </div>
+                </Link>
             )}
 
         </div>

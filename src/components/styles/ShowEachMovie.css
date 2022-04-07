@@ -1,0 +1,52 @@
+.movie-information {
+    position: relative;
+    left: 420px;
+    top: 50px;
+    width: 850px;
+    height: 300px;
+    border: 2px solid black;
+    box-shadow: 1px 1px 1px 1px  black;
+    border-radius: 10px;
+    
+}
+
+.image-movie{
+    position: absolute;
+    bottom: 208px;
+    left: 90px;
+    height: 300px;
+    border: 2px solid black;
+    box-shadow: 1px 1px 1px 1px  black;
+}
+
+.title{
+    position: relative;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.synopsis{
+    margin-left: 10px;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.genre{
+    font-size: 22px;
+    position: relative;
+    right: 150px;
+    top: 15px;
+    text-align: center;
+    
+}
+
+.duration{
+    font-size: 22px;
+    position: relative;
+    bottom: 10px;
+    text-align: center;
+    left: 150px;
+}

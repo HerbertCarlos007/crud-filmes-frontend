@@ -71,7 +71,7 @@ function CreateMovie() {
                 url
             }
 
-            await fetch('http://localhost:5000/movies', {
+            await fetch(`${process.env.REACT_APP_BACKEND_URL}/movies`, {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify(data),

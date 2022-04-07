@@ -7,6 +7,7 @@ import ShowEachMovie from './components/pages/ShowEachMovie'
 import { BrowserRouter as Router, Link, Routes, Route, Switch } from "react-router-dom";
 
 
+
 function App() {
   return (
     <div className='container'>

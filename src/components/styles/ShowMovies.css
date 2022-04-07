@@ -14,10 +14,12 @@
 }
 
 .movies-container{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     overflow: auto;
-
+    display: flex;
+    position: relative;
+    right: 120px;
     
 }
 
@@ -29,7 +31,7 @@
     border-radius: 10px;
     position: relative;
     text-align: center;
-    display: inline-block;
+   
     left: 160px;
     margin: 20px;
     box-shadow: 1px 1px 1px 1px  black;

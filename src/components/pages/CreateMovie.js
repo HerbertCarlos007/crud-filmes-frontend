@@ -90,7 +90,7 @@ function CreateMovie() {
                 <form>
                     <fieldset>
                         <legend><b>Formulário de Filmes</b></legend>
-
+                        <Link to='/movies'>Movies</Link>
                         <div className="inputs">
                             <input placeholder="Nome" onChange={handleChangeName} value={name}/>
                             <input placeholder="Sinopse" onChange={handleChangeSynopsi} />
@@ -102,7 +102,7 @@ function CreateMovie() {
                                 <option>Comédia</option>
                                 <option>Terror</option>
                             </select>
-                            <button onClick={createMovie}>Adicionar filme</button>
+                            <button className="button-create-movies" onClick={createMovie}>Adicionar filme</button>
                         </div>
                     </fieldset>
                 </form>

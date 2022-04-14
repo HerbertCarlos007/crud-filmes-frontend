@@ -46,7 +46,7 @@ function ShowMovies() {
 
     return (
         <div className="movies-container">
-
+            <Link   className=' list2' to='/createMovies'>Home</Link>
             {movies.map((movie) =>
 
                 <Link to={`/movies/${movie._id}`} state={{ id: movie._id }}>

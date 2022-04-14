@@ -33,3 +33,19 @@
   left: 590px;
 }
 
+@media screen and (max-width: 960px) {
+    
+    li{
+      position: relative;
+      left: 400px;
+      top: 40px;
+    }
+
+    .list{
+      z-index: 1;
+    }
+}
+
+
+
+ 

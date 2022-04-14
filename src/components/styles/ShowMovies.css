@@ -49,20 +49,7 @@ img{
     border-radius: 10px;
 }
 
-.button{
-   
-    background-color: rgb(246, 7, 70);
-}
 
-button{
-    border-radius: 20px;
-    width: 300px;
-    position: relative;
-    top: 20px;
-    left: 180px;
-   
-    
-}
 
 .info{
     position: relative;
@@ -72,3 +59,7 @@ button{
     color: rgb(134, 131, 131);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+
+
+   

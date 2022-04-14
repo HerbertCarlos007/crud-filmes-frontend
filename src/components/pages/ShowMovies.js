@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react'
 import '../styles/ShowMovies.css'
 import image from '../../assets/imagem.jpg'
 import { Link, useParams } from "react-router-dom";
+import axios from "axios";
+import api from "../../services/api";
 
 
 
@@ -15,11 +17,17 @@ function ShowMovies() {
     }, [])
 
     async function getMovies() {
+    
+        const token = localStorage.getItem('token') 
 
         try {
-            const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/movies`, { method: 'GET' })
+            const response = await api.get(`${process.env.REACT_APP_BACKEND_URL}/movies`, {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            })
 
-            const data = await response.json()
+            const data = response.data
 
             setMovies(data)
 

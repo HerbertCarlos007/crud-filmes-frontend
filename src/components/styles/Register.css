@@ -1,0 +1,25 @@
+.container-register{
+    margin-top: 40px;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.title-register{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 45px;
+}
+
+.button-form-register{
+    display: flex;
+    justify-content: center;
+}
+
+.button-register{
+    width: 200px;
+    height: 35px;
+    border-radius: 10px;
+    font-size: 20px;
+}

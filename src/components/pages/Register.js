@@ -3,13 +3,27 @@ import '../styles/Register.css'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as yup from 'yup'
 import api from "../../services/api";
+import Swal from 'sweetalert2'
+import { useNavigate } from "react-router-dom";
 
 function Register() {
 
-    
+    const navigate = useNavigate();
 
-    const handleClickRegister = async ({ name, email, password }) => {
-         await api.post('/users/register', { name, email, password })
+    const handleClickRegister = async ({ name, email, password, confirmPassword }) => {
+       const response = await api.post('/users/register', { name, email, password, confirmPassword })
+       if(response.status === 201){
+              Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Cadastro realizado com sucesso!',
+                showConfirmButton: false,
+                timer: 1500
+             }).then(() => {
+                navigate('/login')
+             })
+
+       }
          
     }
 

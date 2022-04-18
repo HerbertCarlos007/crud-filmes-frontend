@@ -17,7 +17,7 @@ function Login() {
         localStorage.setItem('token', response.data.token)
         navigate('/createMovies')
       }
-       // navigate('/createMovies')
+       
     }
 
     return(
@@ -26,7 +26,7 @@ function Login() {
                 <form className="login-form">
                     <input className="input-login" onChange={(e) => setEmail(e.target.value)} value={email} type='text' placeholder='Login'/>
                     <input className="input-login" onChange={(e) => setPassword(e.target.value)} value={password} type='text' placeholder='Senha'/>
-                    <div className="button-login" onClick={handleClickLogin}>Entrar</div>
+                    <input type='button' className="button-login" onClick={handleClickLogin} value='Entrar'/>
                 </form>
             <div className="register-login">
                 <span>Nao tem cadastro?</span>

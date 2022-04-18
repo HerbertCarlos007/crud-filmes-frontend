@@ -21,11 +21,13 @@ function ShowMovies() {
         const token = localStorage.getItem('token') 
 
         try {
+            
             const response = await api.get(`${process.env.REACT_APP_BACKEND_URL}/movies`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
             })
+            console.log(response)
 
             const data = response.data
 
@@ -37,12 +39,14 @@ function ShowMovies() {
     }
 
     async function deleteMovies(id) {
+        const token = localStorage.getItem('token')
 
         try {
 
-            await fetch(`${process.env.REACT_APP_BACKEND_URL}/movies/${id}`, {
-                method: 'DELETE',
-                headers: { 'Content-Type': 'application/json' }
+            await api.delete(`${process.env.REACT_APP_BACKEND_URL}/movies/${id}`, {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
             })
 
         } catch (error) {

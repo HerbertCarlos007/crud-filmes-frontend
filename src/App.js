@@ -18,7 +18,7 @@ function App() {
      
       <Routes>
         <Route path='/createMovies' element={<CreateMovie/>}></Route>
-        <Route path='/login' element={<Login/>}></Route>
+        <Route exact path='/' element={<Login/>}></Route>
         <Route path='/register' element={<Register/>}></Route>
         <Route path='/movies' element={<ShowMovies/>}></Route>
         <Route path='/movies/:id' element={<ShowEachMovie/>}></Route>

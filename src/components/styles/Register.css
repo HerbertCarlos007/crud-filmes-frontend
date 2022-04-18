@@ -1,25 +1,38 @@
 .container-register{
-    margin-top: 40px;
+    width: 400px;
+    
+    height: 350px;
+    margin: 0 auto;
     border: 2px solid black;
     border-radius: 20px;
-    padding: 20px;
+    box-shadow: 10px 5px 5px black;
+    position: relative;
+    top: 50px;
 }
 
 .title-register{
     display: flex;
     justify-content: center;
+    position: relative;
+    top: 5px;
     color: white;
-    font-size: 45px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.button-form-register{
-    display: flex;
-    justify-content: center;
+.register-form-field{
+  position: relative;
+  left: 22px;
+  top: 15px;
+  border-radius: 20px;
 }
 
 .button-register{
-    width: 200px;
-    height: 35px;
-    border-radius: 10px;
-    font-size: 20px;
+    border-radius: 20px;
+    width: 300px;
+    height: 30px;
+    position: relative;
+    left: 51px;
+    top: 15px;
+    background-color: white;
+    cursor: pointer;
 }

@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from "react";
 import { useLocation, useParams} from 'react-router'
+import api from "../../services/api";
 import '../styles/ShowEachMovie.css'
 
 
@@ -21,11 +22,18 @@ function ShowEachMovie() {
 
     async function showMovie() {
 
+        const token = localStorage.getItem('token')
+
         try {
 
-            const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/movies/${id}`)
+            const response = await api.get(`${process.env.REACT_APP_BACKEND_URL}/movies/${id}`,{
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            })
 
-           const data = await response.json()
+           const data = response.data
+
             setName(data.name)
             setSynopsis(data.synopsis)
             setGenre(data.genre)

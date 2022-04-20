@@ -17,6 +17,7 @@
     position: absolute;
     top: 157px;
     left: 40px;
+    width: 500px;
     height: 300px;
     border: 2px solid black;
     border-radius: 20px;
@@ -26,6 +27,7 @@
 .image-each-movie{
     border-radius: 20px;
     height: 300px;
+    width: 500px;
 }
 
 .title {

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useLocation, useParams} from 'react-router'
 import api from "../../services/api";
 import '../styles/ShowEachMovie.css'
+import { useNavigate }  from "react-router-dom";
 
 
 function ShowEachMovie() {
@@ -12,7 +13,8 @@ function ShowEachMovie() {
     }, [])
     
     const { id } = useLocation().state
-
+    const navigate = useNavigate()
+    
     const [name, setName] = useState('')
     const [synopsis, setSynopsis] = useState('')
     const [duration, setDuration] = useState('')
@@ -45,21 +47,22 @@ function ShowEachMovie() {
         }
     }
 
+    function goMoviesNavigate() {
+        navigate('/movies')
+    }
 
     return(
-        <div className="movies">
-
+        <div >
+            <h2 className="link-movies-navigate" onClick={goMoviesNavigate}>Movies</h2>
            <div className="movie-information">
                 <h1 className="title">{name}</h1>
                 <p className="synopsis"><b>{synopsis}</b></p>
                 <p className="genre">Genero: {genre}</p>
-                <p className="duration">Duração: {duration}</p>
-                
+                <p className="duration">Duração: {duration}</p>     
            </div>
-
            
-           <div className="image-container">
-                <img src={url} className='image-movie'/>
+           <div className="image-container-each-movie">
+                <img src={url} className='image-each-movie'/>
            </div>
 
         </div>

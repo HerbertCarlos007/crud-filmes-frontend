@@ -1,0 +1,1 @@
+<h2 className="link-to-create-movies" onClick={goToCreateMovies}>Home</h2>
